@@ -69,18 +69,131 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/7WM3fMiTz90?si=8IMh6dJxhelkHeLp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <iframe width="1000px" height="500px" src="https://sample-videos.com/"></iframe>
 
-            
         <!-- semantic tags -->
+            <header></header>
+            <footer></footer>
+            <section></section>
+            <main></main>
+            <aside></aside>
+            <time></time>
+            <nav></nav>
 
         <!-- formatting tags -->
+            <b>Bold</b><i>Italics</i><u>Underline</u>
+            <br><strong>Strong</strong><em>Emphasis</em><ins>Insert</ins>
 
+            <Marquee direction="up" height="200px"><center><P>HTML stands for <mark>Hypertext <del>Marking</del><ins>Markup</ins> Language</mark></P></center></Marquee>
+
+            2<sup>2</sup><br>
+            d<sub>x</sub>
+
+            <blockquote></blockquote>
+            <figure>
+                <figcaption></figcaption>
+            </figure>
+            <small></small>
+            
         <!-- list tags -->
+            <ol type="A">
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+            </ol>
+            <ul type="square">
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+                <li>List Item</li>
+            </ul>
+
+            <dl>
+                <dt>Semantic HTML tags:</dt>
+                <dd>
+                    Semantic HTML tags are tags that define the meaning of the content they contain. For example, tags like &lt;header&gt;, &lt;article&gt;, and &lt;footer&gt; are semantic HTML tags. They clearly indicate the role of the content they contain. On the other hand, tags like &lt;div&gt; and &lt;span&gt; are typical examples of non-semantic HTML elements.
+                </dd>
+            </dl>
 
         <!-- table tags -->
+            <table border="3">
+                <caption>Student Database</caption>
+                <colgroup>
+                    <col span="1" style="background-color: lightblue;" />
+                    <col span="2" style="background-color: orange;" />
+                    <col />
+                    <col style="background-color: aquamarine;" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Roll No.</th>
+                        <th colspan="2">Student Name</th>
+                        <th rowspan="2">Age</th>
+                        <th rowspan="2">Grade</th>
+                    </tr>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>18</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane</td>
+                        <td>Smith</td>
+                        <td>17</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Michael</td>
+                        <td>Johnson</td>
+                        <td>16</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Akash</td>
+                        <td>Soni</td>
+                        <td>25</td>
+                        <td>A+</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
 
         <!-- heading tags -->
+            <h1>This is a Heading Level 1</h1>
+            <h2>This is a Heading Level 2</h2>
+            <h3>This is a Heading Level 3</h3>
+            <h4>This is a Heading Level 4</h4>
+            <h5>This is a Heading Level 5</h5>
+            <h6>This is a Heading Level 6</h6>
 
         <!-- form tags -->
+            <fieldset>
+                <legend>HTML Form tags:</legend>
+                <form method="post" action="backend.php">
+                    <label for="email-input">Enter email address:</label>
+                    <input type="email" id="email-input" name="email-id" /><br>
+                    <label for="pwd-input">Enter password:</label>
+                    <input type="password" id="pwd-input" name="passwd" /><br>
+                    <textarea rows="10" cols="30">This is a text area</textarea><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </fieldset>
 
         <!-- misc tags -->
         <div style="height: 1000px"></div>
