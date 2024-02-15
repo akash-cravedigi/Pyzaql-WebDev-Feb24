@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
     <head>
         <title>First Webpage</title>
         <meta charset="utf-8" />
@@ -25,7 +25,7 @@
             <p>Text      inside      paragraph    
                 
                 tag</p><p>Text inside another paragraph tag</p>
-            <div>Text inside div tag</div><div>Text inside another div tag</div>
+            <div dir="ltr" lang="en">Text inside div tag</div><div>Text inside another div tag</div>
             <span>Text inside span tag</span> <br> <span id="span">Text inside another span tag</span>
 
             <pre>This      is     a    
@@ -34,13 +34,15 @@
             <br><hr>
 
             <a href="https://pyzaql.com" target="_blank">Pyzaql</a>
-            <a href="./index.html">Index page</a>
+            <a href="./index.html" download="./index.html" type="text/html">Index page</a>
             <a href="#span">Take me to span tag</a>
 
         <!-- multimedia tags -->
-            <img src="https://www.pyzaql.com/_next/static/media/heroIllu.3be56d30.svg" height="200px" />
+            <img title="title of image" src="https://www.pyzaql.com/_next/static/media/heroIllu.3be56d30.svg" height="200" />
             <img src="./assets/sample.png" height="200px" />
-            <img srcset="/assets/sample.png 1400w, /assets/sample.png 1200w, /assets/sample.png 800w" src="./assets/sample.png" />
+            <img srcset="/assets/sample.png 1400w, /assets/sample.png 1200w, /assets/sample.png 800w"
+            sizes="(min-width: 1400px) 1400w,(min-width: 1200px) 1200w,800px"
+            src="./assets/sample.png" />
 
             <video controls height="200px">
                 <source src="./assets/videos/sample.mkv" type="audio/mkv" />
@@ -252,10 +254,10 @@
 
                 <!-- multiple choice fields -->
                     <!-- Checkbox -->
-                    <input type="checkbox" id="checkbox_input" name="opt1"><label for="checkbox_input">Checkbox</label><br>
-                    <input type="checkbox" id="checkbox_input" name="opt2"><label for="checkbox_input">Checkbox</label><br>
-                    <input type="checkbox" id="checkbox_input" name="opt3"><label for="checkbox_input">Checkbox</label><br>
-                    <input type="checkbox" id="checkbox_input" name="opt4"><label for="checkbox_input">Checkbox</label><br><br>
+                    <input type="checkbox" id="checkbox_input1" name="opt1"><label for="checkbox_input">Checkbox</label><br>
+                    <input type="checkbox" id="checkbox_input2" name="opt2"><label for="checkbox_input">Checkbox</label><br>
+                    <input type="checkbox" id="checkbox_input3" name="opt3"><label for="checkbox_input">Checkbox</label><br>
+                    <input type="checkbox" id="checkbox_input4" name="opt4"><label for="checkbox_input">Checkbox</label><br><br>
 
                     <!-- Radio Buttons -->
                     <input type="radio" id="radio_input1" name="radio_group" value="M"><label for="radio_input1">Male</label><br>
@@ -301,7 +303,7 @@
                     <input type="reset" value="Reset" />
                     <button type="reset">Reset</button>
 
-                    <!-- Button -->
+                    <!-- Normal Button -->
                     <input type="button" value="Button" />
                     <button type="button">Click me!</button>
 
@@ -310,6 +312,5 @@
             </form>
 
         <!-- misc tags -->
-        <div style="height: 1000px"></div>
     </body>
 </html>
