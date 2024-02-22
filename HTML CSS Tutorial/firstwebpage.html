@@ -12,19 +12,349 @@
         <link href="./assets/external.css" rel="stylesheet" />
         <script src="./assets/external.js"></script>
         <style>
-            /* css content */
+            /* css comment */
+
+            /* css syntax */
+                selector::pseudoclass {
+                    property: value;
+                }
+            
+            /* id selector (#) */
+                #para2 {
+                    color: blueviolet;
+                }
+            
+            /* class selector (.) */
+                .hyperlinks {
+                }
+
+            /* tag selector (tag name) */
+                input {
+                    border: 2px solid green;
+                }
+
+                input.hyperlinks {
+                    padding: 20px;
+                }
+            
+            /* grouping selector (,) */
+                #para1, #para2, span {
+                    font-weight: bold;
+                    font-size: 30px;
+                } 
+            
+            /* attribute selector */
+                img[src="./assets/sample.png"] {
+                    height: 100px;
+                }
+
+                [type="button"] {
+                    border: 5px solid red;
+                }
+                
+                th[rowspan] {
+                    text-decoration: line-through;
+                }
+
+            /* universal selector (*) */
+                * {
+                    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+                }
+
+                table * {
+                    background-color: brown;
+                }
+            
+            /* relational selectors */
+            #relation {
+                border: 5px solid black;
+            }
+            section {
+                background-color: pink;
+                margin: 20px;
+                padding: 20px;
+                border: 2px dotted red;
+
+            }
+                /* descendent selector */
+                    #john * {
+                        border: 10px solid red;
+                    }
+                /* child selector */
+                    #rohan>* {
+                        border: 10px solid green;
+                    }
+
+                /* sibling selector (~) */
+                    #lee ~ * {
+                        background-color: lightblue;
+                    }
+                /* adjacent selector (+) */
+                    #lee + * {
+                        background-color: yellow;
+                    }
+
+            /* css values */
+                #text-values {
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-weight: bold;
+                    color: blueviolet;
+                }
+
+                #numeric-values {
+                    height: 10vh;
+                    transform: translateX(-50%);
+                    width: 100%;
+
+                    margin: 20px;
+                    padding: 0.5in;
+                }
+
+                #colour-values {
+                    background-color: #9a6a6a;
+                    color: rgba(142,35, 134, 0.7);
+                    color: rgba(72, 241, 34, 0.887);
+                }
+
+            /* css properties */
+                #box-properties {
+                    height:0;
+                    width: 0;
+
+                    padding: 0;
+                    padding-left: 0; padding-inline-start: 0;
+                    padding-right: 0; padding-inline-end: 0;
+                    padding-top: 0; padding-block-start: 0;
+                    padding-bottom: 0; padding-block-end: 0;
+                    padding-inline: 0;
+                    padding-block: 0;
+                    padding: 20px;
+                    padding: 20px 30px;
+                    padding: 10px 20px 30px 40px;
+
+                    margin:0;
+
+                    border: 2px solid black;
+                    border-width: 2px;
+                    border-style: solid;
+                    border-color: black;
+                    border-top: 5px dashed green;
+                    border-top-color: 0;
+                    border-top-width: 0;
+                    border-top-style: 0;
+                }
+
+                #position-property {
+                    position: static;
+
+                    position: relative;
+                    top: 0; bottom: 0;
+                    right: 0; left: 0;
+            
+                    position: absolute;
+
+                    position: fixed;
+
+                    position: sticky; top: 10px;
+                } 
+
+                #layout-properties {
+                    display: block;
+                    display: inline;
+                    display: inline-block;
+
+                    display: grid;
+                    display: flex;
+                }
+
+                #item1 { grid-area: header; }
+                #item2 { grid-area: nav; }
+                #item3 { grid-area: logo; }
+                #item4 { grid-area: main; }
+                #item5 { grid-area: aside; }
+                #item6 { grid-area: footer; }
+                #grid-layout {
+                    display: grid;
+                    grid-template-areas: 
+                        'logo header header header header header'
+                        'nav nav nav nav nav nav'
+                        'main main main main aside aside'
+                        'main main main main aside aside'
+                        'footer footer footer footer footer footer';
+                    gap: 10px;
+                }
+                #grid-layout div {
+                    background-color: lightblue;
+                    color: black;
+                    border: 5px solid red;
+                }
+
+                #flex-layout {
+                    display: flex;
+                    justify-content: center;
+                }
+                #flex-layout li {
+                    list-style-type: none;
+                    background-color: lightblue;
+                    color: black;
+                    border: 5px solid red;
+                }
+
+                #text-properties {
+                    font-size: 0;
+                    color: 0;
+                    font-family: 0;
+                    font-weight: 0;
+                    text-decoration: 0;
+                    font-style: italic;
+                    text-align: center;
+                }
+
+                body {
+                    overflow-y:scroll;
+                }
+                body::-webkit-scrollbar {
+                    background-color: aqua;
+                    width: 0.7vw;
+                }
+                body::-webkit-scrollbar-thumb {
+                    background-color: blue;
+                    border-radius: 30px;
+                }
+
+            /* pseudoclasses */
+            div:hover { 
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            input::placeholder {
+
+            }
+
+            input::-moz-placeholder {
+
+            }
+
+            #sample:first-of-type {
+
+            }
+            #sample:nth-last-of-type(3) {}
+            #sample:link {}
+
+            a {
+                color: blue;
+            }
+            a:active {
+                color: blue;
+            }
+            
+            a:visited {
+                color: purple;
+            }
+            a:hover {
+                color: pink;
+            }
+
+            /* css animations */
+                #box {
+                    position: relative;
+                    height: 200px;
+                    width: 200px;
+                    background-color: blue;
+                    animation-name: box-animation;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+                    animation-delay: 2s;
+                    animation-direction:reverse;
+                }
+
+                @keyframes box-animation {
+                    0% { background-color: blue; left: 0px; width: 200px;}
+                    25% { width: 500px;}
+                    50% { background-color: greenyellow; left: 500px;}
+                    85% { width: 200px;}
+                    100% { background-color: blue; left: 0px;}
+                }
+
+            /* responsive web dev */
+                @media only screen and (max-width:1200px) {
+                    body {
+                        background-color: blue;
+                    }
+                }
+                @media only screen and (max-width:900px) {
+                    body {
+                        background-color: green;
+                    }
+                }
+                @media only screen and (max-width:600px) {
+                    body {
+                        background-color: yellow;
+                    }
+                }
+                @media only screen and (max-width:300px) {
+                    
+                }
+
+            /* css prefixes */
+                #prefixes {
+                    -webkit-transition: all 4s ease;
+                    -moz-transition: all 4s ease;
+                    -ms-transition: all 4s ease;
+                    -o-transition: all 4s ease;
+                    transition: all 4s ease;
+                }
+            
         </style>
         <script>
             // javascript content
         </script>
     </head>
     <body>
+        <div id="box"></div>
+        <div id="flex-layout">
+            <li>Flex <br>item 1</li>
+            <li>Flex item 2</li>
+            <li>Flex item 3</li>
+            <li>Flex item<br> 4</li>
+            <li>Flex item 5</li>
+            <li>Flex item 6</li>
+            <li>Flex item 7</li>
+        </div>
+
+        <br><br><br>
+        <div id="grid-layout">
+            <div id="item1">Header</div>
+            <div id="item2">Navigation</div>
+            <div id="item3">Website Name & logo</div>
+            <div id="item4">Main<br>Section</div>
+            <div id="item5">Aside</div>
+            <div id="item6">Footer</div>
+        </div>
         <!-- html comment -->
+            <div id="relation">
+                <section id="john">
+                    <section id="steve">
+                        <section id="lee"></section>
+                        <section id="bob"></section>
+                        <section id="ella"></section>
+                        <section id="emma"></section>
+                    </section>
+                    <section id="rohan">
+                        <section id="sal"></section>
+                        <section id="tom">
+                            <section id="sam"></section>
+                        </section>
+                    </section>
+                </section>
+            </div>
+
         <!-- basic tags -->
             Text directly inside body tag
-            <p>Text      inside      paragraph    
-                
-                tag</p><p>Text inside another paragraph tag</p>
+            <p id="para1">Text inside paragraph tag</p><p id="para2">Text inside another paragraph tag</p>
             <div dir="ltr" lang="en">Text inside div tag</div><div>Text inside another div tag</div>
             <span>Text inside span tag</span> <br> <span id="span">Text inside another span tag</span>
 
@@ -33,9 +363,9 @@
 
             <br><hr>
 
-            <a href="https://pyzaql.com" target="_blank">Pyzaql</a>
-            <a href="./index.html" download="./index.html" type="text/html">Index page</a>
-            <a href="#span">Take me to span tag</a>
+            <a class="hyperlinks" href="https://pyzaql.com" target="_blank">Pyzaql</a>
+            <a class="hyperlinks" href="./index.html" download="./index.html" type="text/html">Index page</a>
+            <a class="hyperlinks" href="#span">Take me to span tag</a>
 
         <!-- multimedia tags -->
             <img title="title of image" src="https://www.pyzaql.com/_next/static/media/heroIllu.3be56d30.svg" height="200" />
@@ -296,8 +626,8 @@
 
                 <!-- buttons -->
                     <!-- Submit Button -->
-                    <input type="submit" value="Submit" />
-                    <button type="submit">Submit</button>
+                    <input type="submit" value="Submit" class="hyperlinks" />
+                    <button type="submit" class="hyperlinks">Submit</button>
 
                     <!-- Reset Button -->
                     <input type="reset" value="Reset" />
