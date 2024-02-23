@@ -4,10 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muse - Music Streaming</title>
+    <script src="https://kit.fontawesome.com/9e2c9fd14a.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            display: flex;
+            flex-direction: row;
+            background-color: #2b2743;
+            height: 90vh;
+        }
+        main>nav {
+            background-color: #2f2b45;
+            color:white;
+            width: 15vw;
+        }
+        main>#homepage {
+            background-color: #29263f;
+            width: 85vw;
+        }
+        main>nav img {
+            height: 8vh;
+            margin: 10px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;    
+            width: 100vw;
+            display: flex;
+            flex-direction: row;   
+            align-items: center;
+            justify-content: space-between;     
+            background-color: #191628;
+            padding: 10px 20px;
+            color:#b7b1d9;
+        }
+
+        .song-profile {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .song-profile img {
+            height: 8vh;
+            margin-right: 10px;
+        }
+        #song-info span:nth-of-type(1) {
+            font-size: 15px;
+            color: white;
+            display: block;
+            margin-right: 30px;
+        }
+        #song-info span:nth-of-type(2) {
+            font-size: 12px;
+            display: block;
+            margin-top: 5px;
+            margin-right: 30px;
+        }
+        #music-controls span {
+            color: white;
+        }
+        #music-controls input[type="range"] {
+            width: 30vw;
+            margin-inline: 20px;
+        }
+        #wishlist-controls #remove-from-wishlist {
+            color: red;
+            display: none;
+        }
+        #audio-controls {
+            margin-right: 40px;
+        }
+    </style>
 </head>
 <body>
     <main>
-        <nav></nav>
+        <nav>
+            <img src="./assets/logo.png" />
+            <div>
+                <h4>MENU</h4>
+                <li><i class="fa-solid fa-music"></i><a href="#">Explore</a></li>
+                <li><i class="fa-solid fa-music"></i><a href="#">Genres</a></li>
+                <li><i class="fa-solid fa-music"></i><a href="#">Albums</a></li>
+                <li><i class="fa-solid fa-music"></i><a href="#">Artists</a></li>
+            </div>
+            <div>
+                <h4>LIBRARY</h4>
+                <li><i class="fa-solid fa-music"></i><a href="#">Recent</a></li>
+                <li><i class="fa-solid fa-music"></i><a href="#">Albums</a></li>
+                <li><i class="fa-solid fa-music"></i><a href="#">Favourites</a></li>
+            </div>
+            <div>
+                <h4>PLAYLIST</h4>
+                <li><i class="fa-solid fa-music"></i><a href="#">Good Vibes</a></li>
+                <li><i class="fa-solid fa-music"></i><a href="#">Best Jazz</a></li>
+                <li><i class="fa-solid fa-music"></i><a href="#">Party Hard</a></li>
+                <button><i class="fa-solid fa-plus"></i>Create New</button>
+            </div>
+        </nav>
         <section id="homepage">
             <header>
                 <nav></nav>
@@ -23,18 +120,47 @@
             </section>
         </section>
     </main>
+    
+    
     <footer>
         <div class="song-profile">
-            <img src="./assets/hero-img.png" />
+            <img src="./assets/song-label.jpeg" />
             <div id="song-info">
                 <span>Enemy</span>
                 <span>Imagine Dragons</span>
             </div>
             <span id="song-views">30% APR</span>
         </div>
-        <div id="music-controls"></div>
-        <div id="wishlist-controls"></div>
-        <div id="audio-controls"></div>
+        <div id="music-controls">
+            <span>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-pause"></i>
+                <i class="fa-solid fa-forward-step"></i>
+            </span>
+            <input type="range" />
+            <span>00:35</span>
+        </div>
+        <div id="wishlist-controls" onclick="wishlist_toggle()">
+            <i class="fa-solid fa-heart" id="remove-from-wishlist"></i>
+            <i class="fa-regular fa-heart" id="add-to-wishlist"></i>
+        </div>
+        <div id="audio-controls">
+            <i class="fa-solid fa-volume-high"></i>
+            <input type="range" />
+        </div>
     </footer>
+    <script>
+        const wishlist_toggle = () => {
+            if(document.getElementById('remove-from-wishlist').style.display == 'none') {
+                document.getElementById('add-to-wishlist').style.display = "none";
+                document.getElementById('remove-from-wishlist').style.display = "block";
+            }
+            else {
+                document.getElementById('add-to-wishlist').style.display = "block";
+                document.getElementById('remove-from-wishlist').style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
