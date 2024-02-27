@@ -2,8 +2,9 @@
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    white-space: nowrap;
 }
-main {
+body>main {
     display: flex;
     flex-direction: row;
     background-color: #2b2743;
@@ -12,12 +13,13 @@ main {
 main>nav {
     background-color: #2f2b45;
     color:white;
-    width: 15vw;
+    width: 20vw;
+    min-width: 150px;
     white-space: nowrap;
 }
 main>#homepage {
     background-color: #29263f;
-    width: 85vw;
+    width: 80vw;
 }
 main>nav img {
     height: 6vh;
@@ -26,7 +28,7 @@ main>nav img {
     transform: translateX(-50%);
 }
 main>nav div {
-    margin-left: 20px;
+    margin-left: 3vw;
     margin-block: 30px;
 }
 main>nav h4 {
@@ -64,10 +66,128 @@ main>nav button {
     background-color: transparent;
     color: #b7b1d9;
     border: 2px dashed white;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 30px;
     margin-top: 10px;
     margin-left: 10px;
+}
+main>nav button i {
+    margin-inline-end: 5px;
+}
+main>#homepage {
+    width: 85vw;
+}
+#homepage header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    border-bottom: 0.5px solid #b7b1d945;
+}
+header>nav {
+    display: flex;
+    flex-direction: row;
+}
+header>nav li {
+    list-style-type: none;
+    padding-block: 30px;
+    margin-inline: 15px;
+    font-size: 13px;
+}
+header>nav li.active {
+    border-bottom: 3px solid white;
+}
+header>nav li.active a {
+    font-weight: bold;
+    color: white;
+} 
+header>nav a {
+    color:#b7b1d9;
+    text-decoration: none;
+}
+#userarea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#userarea img {
+    height: 50px;
+}
+#userinfo {
+    text-align: right;
+}
+#userinfo h4 {
+    color: white;
+    font-weight: normal;
+}
+#userinfo #user-dropdown {
+    position: relative;
+}
+#user-dropdown #drop-btn {
+    background-color: transparent;
+    border: none;
+    color: #b7b1d9;
+}
+#user-dropdown #drop-content {
+    display: none;
+    background-color: #b7b1d9;
+    border-radius: 15px;
+    padding: 7px;
+    position: absolute;
+    right: 0;
+}
+#user-dropdown #drop-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+#drop-content a:hover {
+    box-shadow: 5px 5px 8px #625e78;
+}
+#user-dropdown:hover #drop-content {
+    display: block;
+}
+#music-area>aside {
+    width: 20vw;
+    padding: 30px;
+    padding-right: 0;
+    overflow-y: scroll;
+    overflow-x: visible;
+    height: 72vh;
+}
+#music-area>aside::-webkit-scrollbar {
+width: 8px;
+}
+#music-area>aside::-webkit-scrollbar-track {
+background:  #2f2b45; 
+}
+
+#music-area>aside::-webkit-scrollbar-thumb {
+background:  #b7b1d9;
+border-radius: 20px;
+}
+#music-area>aside::-webkit-scrollbar-thumb:hover {
+background:  #6f6896; 
+}
+#music-area>aside h5 {
+    font-size: 17px;
+    color: white;
+}
+#music-area>aside .song-profile {
+    margin-block: 5px;
+    padding: 5px;
+}
+.song-profile #icon-underlay {
+    margin-left: 10px;
+    padding: 10px 12px 8px 14px;
+    background-color: #b7b1d9a0;
+    border-radius: 30px;
+}
+.song-profile #icon-underlay i {
+    color: white;
 }
 footer {
     position: fixed;
@@ -80,28 +200,6 @@ footer {
     background-color: #191628;
     padding: 10px 20px;
     color:#b7b1d9;
-}
-
-.song-profile {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.song-profile img {
-    height: 6vh;
-    margin-right: 10px;
-}
-#song-info span:nth-of-type(1) {
-    font-size: 15px;
-    color: white;
-    display: block;
-    margin-right: 30px;
-}
-#song-info span:nth-of-type(2) {
-    font-size: 12px;
-    display: block;
-    margin-top: 5px;
-    margin-right: 30px;
 }
 #music-controls span {
     color: white;
@@ -116,4 +214,31 @@ footer {
 }
 #audio-controls {
     margin-right: 40px;
+}
+
+
+.song-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:#b7b1d9;
+}
+.song-profile img {
+    height: 6vh;
+    margin-right: 10px;
+}
+#song-info span:nth-child(1) {
+    font-size: 15px;
+    color: white;
+    display: block;
+    margin-right: 30px;
+}
+#song-info span:nth-child(2) {
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+    margin-right: 30px;
+}
+.song-profile #song-views {
+    font-size: 12px;
 }
