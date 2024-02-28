@@ -6,69 +6,6 @@
     <title>Muse - Music Streaming</title>
     <link href="./external.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/9e2c9fd14a.js" crossorigin="anonymous"></script>
-    <style>
-        #music-area {
-            display: flex;
-            flex-direction: row;
-            justify-content: start;
-        }
-        #music-area>main {
-            width: 55vw;
-            margin: 30px;
-        }
-        #hero-section {
-            position: relative;
-            height: 220px;
-            border-radius: 20px;
-            color: white;
-            padding: 30px;
-            background-image: linear-gradient(270deg,#b9acff, #2f2b45);
-        }
-        #hero-section h1 {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
-        #hero-section h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-weight: normal;
-        }
-        #hero-section h2 {
-            font-size: 25px;
-            margin-bottom: 25px;
-            font-weight: normal;
-        }
-        #hero-section #cta {
-            display: flex;
-            flex-direction: row;
-        }
-        #hero-section #cta button:nth-child(1) {
-            background-color: white;
-            border: none;
-            padding: 15px 25px;
-            border-radius: 20px;
-        }
-        #hero-section #cta button:nth-child(2) {
-            background-color: transparent;
-            border: 1px solid white;
-            padding: 6px 10px 4px 10px;
-            font-size: 20px;
-            color: white;
-            margin-inline: 30px;
-            border-radius: 30px;
-        }
-        #hero-section #cta #cta-text {
-            display: flex;
-            flex-direction: column;
-        }
-        #hero-section img {
-            position: absolute;
-            height: 300px;
-            bottom: 0;
-            right: 0;
-            border-radius: 20px;
-        }
-    </style>
 </head>
 <body>
     <main>
@@ -137,7 +74,7 @@
                         </div>
                         <img src="./assets/hero-img.png" />
                     </section>
-                    <section id="top-artists">
+                    <section id="top-artists" class="music-area-lists">
                         <header>
                             <h5>Top Artists</h5>
                             <span>See all</span>
@@ -173,39 +110,45 @@
                             </div>
                         </div>
                     </section>
-                    <section id="new-hits">
-                        <div class="song-profile">
-                            <img src="./assets/song-label.jpeg" />
-                            <div id="song-info">
-                                <span>Enemy</span>
-                                <span>Imagine Dragons</span>
+                    <section id="new-hits" class="music-area-lists">
+                        <header>
+                            <h5>New Hits</h5>
+                            <span>See all</span>
+                        </header>
+                        <div id="song-list">
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg" />
+                                <div id="song-info">
+                                    <span>Enemy</span>
+                                    <span>Imagine Dragons</span>
+                                </div>
+                            </div><div class="song-profile">
+                                <img src="./assets/song-label.jpeg" />
+                                <div id="song-info">
+                                    <span>Enemy</span>
+                                    <span>Imagine Dragons</span>
+                                </div>
                             </div>
-                        </div><div class="song-profile">
-                            <img src="./assets/song-label.jpeg" />
-                            <div id="song-info">
-                                <span>Enemy</span>
-                                <span>Imagine Dragons</span>
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg" />
+                                <div id="song-info">
+                                    <span>Enemy</span>
+                                    <span>Imagine Dragons</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="song-profile">
-                            <img src="./assets/song-label.jpeg" />
-                            <div id="song-info">
-                                <span>Enemy</span>
-                                <span>Imagine Dragons</span>
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg" />
+                                <div id="song-info">
+                                    <span>Enemy</span>
+                                    <span>Imagine Dragons</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="song-profile">
-                            <img src="./assets/song-label.jpeg" />
-                            <div id="song-info">
-                                <span>Enemy</span>
-                                <span>Imagine Dragons</span>
-                            </div>
-                        </div>
-                        <div class="song-profile">
-                            <img src="./assets/song-label.jpeg" />
-                            <div id="song-info">
-                                <span>Enemy</span>
-                                <span>Imagine Dragons</span>
+                            <div class="song-profile">
+                                <img src="./assets/song-label.jpeg" />
+                                <div id="song-info">
+                                    <span>Enemy</span>
+                                    <span>Imagine Dragons</span>
+                                </div>
                             </div>
                         </div>
                     </section>
