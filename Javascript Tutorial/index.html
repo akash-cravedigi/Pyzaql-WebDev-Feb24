@@ -18,12 +18,13 @@
     <p id="para"><b>This is a Paragraph</b></p>
     <input type="text" id="input" value="Akash"/>
     <button onclick="greet()" type="button">Click!</button>
+    <button onclick="location.reload()">Reload</button>
     <script>
         // single line comment
         
         /* multiple
         line
-        comment */
+        comment
 
         // fundamentals of code
             // data storage
@@ -81,8 +82,15 @@
                     console.log(document.getElementById("para").innerText);
                     document.getSelection("#para>div ul");
                 
-                    // user input
+                    // user input through forms
                     console.log(document.getElementById("input").value);
+
+                    // user input through events
+                        let input = document.getElementById("input");
+                        input.addEventListener("dblclick", () => {
+                            input.style.border = "2px solid red";
+                            input.blur();
+                        })
                 
                     // console output
                     console.log("Message");
@@ -100,12 +108,121 @@
                     document.body.appendChild(paragraph);
                 
                     // notification input & output
+                        window.alert("Alert!");
+
+                        let delete_confirmation = window.confirm("Are you sure?");
+                        if(delete_confirmation==true) {
+                            document.write("File deleted");
+                        } else {
+                            document.write("File not deleted");
+                        }
+
+                        let confirmation_message = window.prompt("Are you sure? Enter 'yes' or 'no' to confirm.");
+                        if(confirmation_message) {
+                            confirmation_message = confirmation_message.toUpperCase();
+                            if(confirmation_message=='YES' || confirmation_message=='Y') {
+                                document.write("File deleted");
+                            }
+                            else if(confirmation_message=='NO' || confirmation_message=='N') {
+                                document.write("File not deleted");
+                            }
+                            else {
+                                document.write("invalid input")
+                            }
+                        }
+                        else {
+                            document.write("File deletion cancelled");
+                        }
+                
+                    // print dom
+                        print()      
                     
-
-
+                    // refresh page - location.reload()
+                       */  
             // operators
-            // branching
+                // arithmetic operators => +, -, *, /, %, ++, --
+                    let a = 10; let b = 20;
+                    let c = a--;
+                    console.log(c,a)
+                // comparison operators - >, <, >=, <=, ==, ===, !=, !==
+                    a = 10 ; b = "10";
+                    console.log(a!==b);
+                // logical operators - &&, ||, !
+                    a=10; b=20; c=30; let d=undefined;
+                    console.log(b>a && c<b && c>a)
+                    console.log(b<a || c<b || c<a)
+                    console.log(!d)
+                // assignment operator  =, +=, -=, *=, /=, %=
+                    a=50; b=20;
+                    a = a+b;
+                    a+=b;
+                // conditional operator - ?:
+                    (a>b) ? "true statements" : "false statements";
+                // nulleish coalescing operator - ??
+                    let x = d ?? "default";
+                    console.log(d??"default");
+                
+            // branching - if statement, if...else statement, if...else if...else statement, nested...if statement, switch case statement
+                let age = 34; let ll = true;
+                
+                if(age>18) {
+                    console.log("Eligible to drive");
+                }
+                
+
+                if(age>18) {
+                    console.log("Eligible to drive");
+                }
+                else {
+                    console.log("Not eligible to drive");
+                }
+
+                
+                if(age<18 && ll==false) {
+                    console.log("Not eligible to drive")
+                }
+                else if(age<18 && ll==true) {
+                    console.log("Eligible to drive under supervision");
+                }
+                else if(age>18 & ll==true) {
+                    console.log("Eligible to drive after getting DL");
+                }
+                else {
+                    console.log("Not Eligible to drive");
+                }
+
+
+                let grade = "B+";
+                switch(grade.toUpperCase()) {
+                    case "A+":
+                        console.log("Marks in the range of 90 to 100");
+                        break;
+                    case "A-":
+                        console.log("Marks in the range of 80 to 90");
+                        break;
+                    case "B+":
+                        console.log("Marks in the range of 70 to 80");
+                        break;
+                    case "B-":
+                        console.log("Marks in the range of 60 to 70");
+                        break;
+                    case "C":
+                        console.log("Marks in the range of 50 to 60");
+                        break;
+                    case "D":
+                        console.log("Marks in the range of 40 to 50");
+                        break;
+                    case "F":
+                        console.log("Marks in the range of 0 to 40");
+                        break;
+                    default: 
+                        console.log("Invalid grade");
+                }
+
+
+
             // looping
+            // loop control - continue, break
             // functions
                 // old method
                     function myfunc1(params) {
