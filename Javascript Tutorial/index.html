@@ -19,12 +19,14 @@
     <input type="text" id="input" value="Akash"/>
     <button onclick="greet()" type="button">Click!</button>
     <button onclick="location.reload()">Reload</button>
+    <br>
     <script>
         // single line comment
         
         /* multiple
         line
         comment
+        */ 
 
         // fundamentals of code
             // data storage
@@ -34,7 +36,7 @@
                     let float = 34233.45;
                     let num_as_str = "32423432";
                     let boolean = true/false;
-                    let array = [423,3245,"Sesddf",true,false];
+                    let array2 = [423,3245,"Sesddf",true,false];
                     let object = {
                         key1: "value1",
                         key2: "value2",
@@ -138,7 +140,7 @@
                         print()      
                     
                     // refresh page - location.reload()
-                       */  
+                        
             // operators
                 // arithmetic operators => +, -, *, /, %, ++, --
                     let a = 10; let b = 20;
@@ -219,22 +221,94 @@
                         console.log("Invalid grade");
                 }
 
+            // looping - while loop, for loop, do...while, for...in loop and for..of loop
+                let i = 1000;
+                while(i<=50) {
+                    if(i%2==0) console.log(i);
+                    i++;
+                }
+
+                for(i=1; i<=50; i++) {
+                    if(i%2==0) console.log(i);
+                }
+
+                let num=1;
+                for(i=5;i>=num;i--) {
+                    for(j=0;j<i;j++) {
+                        document.write("*")
+                    }
+                    document.write("<br>")
+                }
+
+                i=1000;
+                do {
+                    if(i%2==0) console.log(i);
+                    i++; 
+                }
+                while(i<=50)
 
 
-            // looping
+                let array = [2344,"Akash Soni",true, false,[44,56,32]];
+                for(let value of array) {
+                    console.log(value)
+                }
+
+                console.log(student);
+                for(let value in student.address) {
+                    console.log(value+": "+student.address[value])
+                }
+
             // loop control - continue, break
+                for(let i=0;i<=10;i++) {
+                    if(i==5) continue;
+                    console.log(i);
+                }
+
+                for(let i=0;i<=10;i++) {
+                    if(i==5) break;
+                    console.log(i);
+                }
+
             // functions
                 // old method
-                    function myfunc1(params) {
-                        return null;
+                    function square(param) {
+                        return param*param;
                     }
+                    console.log(square(125))
 
                 // lambda function
                     const myfunc2 = (params) => {
                         return null;
                     }
+
+                // pre-defined functions
+                console.log("234234")
+                document.write("fdsd")
             
-                    // events
+                // 3rd-party APIs
+                async function asyncCall() {
+                    const url = 'https://irctc1.p.rapidapi.com/api/v1/getTrainSchedule?trainNo=12936';
+                    const options = {
+                        method: 'GET',
+                        headers: {
+                            'X-RapidAPI-Key': '1b7912fba6msha2b12ef5bd3ae11p16ccbfjsn90c73bab0aea',
+                            'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
+                        }
+                    };
+
+                    try {
+                        const response = await fetch(url, options);
+                        const result = await response.json();
+                        console.log(result.data);
+                    } catch (error) {
+                        console.error(error);
+                    }
+                }
+                asyncCall()
+
+               
+            // events
+            
             // error handling
 
     </script>
