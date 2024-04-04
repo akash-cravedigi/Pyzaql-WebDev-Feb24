@@ -17,8 +17,11 @@
 <body>
     <p id="para"><b>This is a Paragraph</b></p>
     <input type="text" id="input" value="Akash"/>
-    <button onclick="greet()" type="button">Click!</button>
+    <button onclick="greet()" type="submit">Click!</button>
     <button onclick="location.reload()">Reload</button>
+    <button id="delete-btn">Delete</button>
+    <div id="box" style="height: 200px; width: 200px;"></div>
+    <button id="change-color">Change Colour</button>
     <br>
     <script>
         // single line comment
@@ -26,7 +29,7 @@
         /* multiple
         line
         comment
-        */ 
+       
 
         // fundamentals of code
             // data storage
@@ -143,9 +146,9 @@
                         
             // operators
                 // arithmetic operators => +, -, *, /, %, ++, --
-                    let a = 10; let b = 20;
-                    let c = a--;
-                    console.log(c,a)
+                    let aa = 10; let bb = 20;
+                    let cc = aa--;
+                    console.log(cc,aa)
                 // comparison operators - >, <, >=, <=, ==, ===, !=, !==
                     a = 10 ; b = "10";
                     console.log(a!==b);
@@ -161,7 +164,7 @@
                 // conditional operator - ?:
                     (a>b) ? "true statements" : "false statements";
                 // nulleish coalescing operator - ??
-                    let x = d ?? "default";
+                    let xx = d ?? "default";
                     console.log(d??"default");
                 
             // branching - if statement, if...else statement, if...else if...else statement, nested...if statement, switch case statement
@@ -281,6 +284,19 @@
                         return null;
                     }
 
+                // callback function
+                    document.getElementById("delete-btn").addEventListener("click",() => {
+                        alert("You're deleting a file");
+                    });
+
+                    setTimeout(()=> {
+                        alert("Timer countdown ended");
+                    }, 3000)
+
+                    setInterval(() => {
+                        console.log(new Date().toLocaleString());
+                    }, 3000)
+
                 // pre-defined functions
                 console.log("234234")
                 document.write("fdsd")
@@ -306,11 +322,50 @@
                 }
                 asyncCall()
 
-               
-            // events
+                */ 
+            // Javascript events
+                document.getElementById("change-color").addEventListener("click",() => {
+                    let randomColor = `rgb(${random(255)},${random(255)},${random(255)})`;
+                    document.getElementById("box").style.backgroundColor = randomColor;
+                })
+
+                let random = (num) => {
+                    return Math.floor(Math.random() * (num+1));
+                }
             
             // error handling
+                // basic validation
+                    if(document.getElementById("input").value=="") {
+                        alert("Enter values");
+                    }
 
+                // data format validation
+                    let emailvalidation = () => {
+                        let email = document.getElementById("input").value;
+                        let regex_email = /^([a-z0-9]+\._[a-z0-9]+@[a-z0-9]+\.[a-z0-9]+)^/;
+                        let regex_number = /^(\(\+\d\d\)[0-9]+)^/;
+                        if(!regex_email.test(email)) {
+                            alert("entered value is not an email address");
+                        }
+                    }
+                    
+                // data validation
+
+
+                // try...catch...finally block
+
+                    let addalert = () => {
+                        return 0;
+                    }
+                    try {
+                        addalert("Sample data");
+                    }
+                    catch(error) {
+                        console.log(error.message);
+                    }
+                    finally {
+                        console.log("this was try...catch")
+                    }
     </script>
 </body>
 </html>
